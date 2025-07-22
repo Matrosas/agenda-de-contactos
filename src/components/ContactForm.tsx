@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect,useState } from 'react'
 import { Contact } from '../types/Contact.tsx'
 
 interface ContactFormProps {
@@ -12,6 +12,16 @@ function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: Conta
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
 
+  useEffect(() => {
+    if (editingContact) {
+      setName(editingContact.name)
+      setPhone(editingContact.phone)
+    } else {
+      setName('')
+      setPhone('')
+    }
+  }, [editingContact])
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
@@ -20,7 +30,16 @@ function ContactForm({ onSubmit, editingContact, onUpdate, onCancelEdit }: Conta
       return
     }
 
+    if (editingContact) {
+      onUpdate({
+        ...editingContact,
+        name: name.trim(),
+        phone: phone.trim()
+      })
+    } else {
+
     onSubmit({ name: name.trim(), phone: phone.trim() })
+    }
     setName('')
     setPhone('')
   }

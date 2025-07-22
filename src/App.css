@@ -167,6 +167,26 @@
   padding: 2rem;
 }
 
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.light span,
+body.light strong {
+  color: black;
+}
+
+body.dark span,
+body.dark strong {
+  color: black;
+}
+
 .theme-toggle {
   padding: 0.5rem 1rem;
   border: none;
