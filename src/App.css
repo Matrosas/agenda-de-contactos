@@ -184,7 +184,7 @@ body.light strong {
 
 body.dark span,
 body.dark strong {
-  color: black;
+  color: white;
 }
 
 body.light .app-header {
@@ -194,7 +194,7 @@ body.light .app-header {
 
 body.dark .app-header {
   background-color: #222;
-  color: #fff;
+  color: white;
 }
 
 body.light .form-section,
