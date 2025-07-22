@@ -187,6 +187,56 @@ body.dark strong {
   color: black;
 }
 
+body.light .app-header {
+  background-color: white;
+  color: black;
+}
+
+body.dark .app-header {
+  background-color: #222;
+  color: #fff;
+}
+
+body.light .form-section,
+body.light .contacts-section {
+  background-color: white;
+  color: black;
+  border: 1px solid #000;
+}
+
+body.dark .form-section,
+body.dark .contacts-section {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+body.dark input {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+body.light input {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+body.dark .form-actions button {
+  background-color: #555;
+  color: white;
+}
+
+body.light .form-actions button {
+  background-color: white;
+  color: black;
+  border: 1px solid #000;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .theme-toggle {
   padding: 0.5rem 1rem;
   border: none;

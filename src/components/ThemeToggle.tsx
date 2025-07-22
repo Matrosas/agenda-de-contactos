@@ -2,11 +2,9 @@ import { useEffect,useState } from 'react'
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
-    // Obtener tema desde sessionStorage o usar 'light' por defecto
     return sessionStorage.getItem('theme') || 'light'
   })
 
-  // Cambiar clase del body según el tema
   useEffect(() => {
     document.body.className = theme
     sessionStorage.setItem('theme', theme)
